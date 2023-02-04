@@ -1,7 +1,5 @@
-from src.note.note_manage import *
+import note.controller as c
 import argparse
-
-
 
 def run():
 
@@ -20,21 +18,23 @@ def run():
     parser.add_argument('-e', '--edit', nargs='*', help='Не принимает аргументов.')
     parser.add_argument('-r', '--read', nargs='*', help='Выводит список всех записей')
 
+#TODO unknown странно отрабатывает
     args, unknown = parser.parse_known_args()
     while(args.add != None or args.delete != None or args.edit != None or args.read != None):
         if (args.add):
             if len(args.add) >= 2:
-                add(args.add[0], args.add[1:])
+                c.add(args.add[0], args.add[1:])
             else: print("Неверное колличество аргументов")
             args.add = None
         elif(args.delete):
-            delete(args.delete)
+            c.delete(args.delete)
         elif(args.edit != None):
-            edit()
+            c.edit()
+            return
         elif(args.read != None):
             if args.read:
-                read(args.read[0])
-            else: read()
+                c.read(args.read[0])
+            else: c.read()
             args.read = None
         if unknown:
             print ("Ошибка. Я таких команд не знаю :( '{}'".format (unknown) )

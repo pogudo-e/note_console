@@ -1,5 +1,5 @@
 import csv
-from src.note.user import User
+from note.user import User
 from datetime import datetime as dt
 
 u = User()
