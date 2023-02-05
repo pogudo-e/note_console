@@ -1,6 +1,6 @@
 # Console note app
 
-![logo]()
+![logo](https://raw.githubusercontent.com/pogudo-e/note_console/evgeny/img/logo.png)
 
 ## Project Information
 ___
