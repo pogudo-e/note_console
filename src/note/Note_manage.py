@@ -10,17 +10,23 @@ class NoteManage:
 #TODO обработать вариант когда не найдены элементы для удаления
     def delete(name):
         lines = list()
-
+        sear = None
+        r = None
         with open(file_name(), 'r') as readFile:
             reader = csv.reader(readFile)
             for row in reader:
                 lines.append(row)
                 for field in row:
                     if field == name:
+                        r = row
                         lines.remove(row)
+                        sear = field
+                        print(sear)
+            if sear == None: return None
         with open(file_name(), 'w') as writeFile:
             writer = csv.writer(writeFile)
             writer.writerows(lines)
+        if sear != None: return[r]
 
     def edit():
         search_name = input('Введите имя редактируемой заметки')

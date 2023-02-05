@@ -13,7 +13,9 @@ def edit():
     note.edit()
 
 def delete(t):
-    note.delete(t)
+    print()
+    read_w(note.delete(' '.join(map(str, t))))
+
 
 def add(name, body):
     read_w(note.add(name, body))

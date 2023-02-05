@@ -28,6 +28,7 @@ def run():
             args.add = None
         elif(args.delete):
             c.delete(args.delete)
+            return
         elif(args.edit != None):
             c.edit()
             return

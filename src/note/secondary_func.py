@@ -41,7 +41,7 @@ def to_file():
 
 
 
-def set_time(): return dt.now().strftime('%H:%M-%m-%Y')
+def set_time(): return dt.now().strftime('%d/%m/%Y-%H:%M')
 
 
 
