@@ -1,8 +1,7 @@
 from prettytable import PrettyTable
 
 def read_w(liste):
-    x = PrettyTable()
-    x.field_names = ["ID", "NAME", "BODY", "DATE"]
+    x = PrettyTable(field_names=["ID", "NAME", "BODY", "DATE"])
 
 #TODO Обоаботать вывод при None https://stackoverflow.com/questions/22560768/add-multiple-line-in-python-single-table-cell
     if liste == None: return print(nonefunc(x))
@@ -13,5 +12,4 @@ def read_w(liste):
     x.reversesort=True
     print(x) 
 
-def nonefunc(x):
-    return x.get_string(title="No result's")
+def nonefunc(x): return x.get_string(title="No result's")

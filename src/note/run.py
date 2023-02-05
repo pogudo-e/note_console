@@ -22,20 +22,13 @@ def run():
     args, unknown = parser.parse_known_args()
     while(args.add != None or args.delete != None or args.edit != None or args.read != None):
         if (args.add):
-            if len(args.add) >= 2:
-                c.add(args.add[0], args.add[1:])
+            if len(args.add) >= 2: c.add(args.add[0], args.add[1:])
             else: print("Неверное колличество аргументов")
             args.add = None
-        elif(args.delete):
-            c.delete(args.delete)
-            return
-        elif(args.edit != None):
-            c.edit()
-            return
+        elif(args.delete): return c.delete(args.delete)
+        elif(args.edit != None): return c.edit()
         elif(args.read != None):
-            if args.read:
-                c.read(args.read[0])
+            if args.read: c.read(args.read[0])
             else: c.read()
             args.read = None
-        if unknown:
-            print ("Ошибка. Я таких команд не знаю :( '{}'".format (unknown) )
+        if unknown: print ("Ошибка. Я таких команд не знаю :( '{}'".format (unknown) )
