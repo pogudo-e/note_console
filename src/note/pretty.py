@@ -15,12 +15,3 @@ def read_w(liste):
 
 def nonefunc(x):
     return x.get_string(title="No result's")
-
-# def datef(timestring):
-#     pt = datetime.strptime(timestring,'%d/%m/%Y-%H:%M,%f')
-#     total_seconds = pt.second + pt.minute*60 + pt.hour*3600 + pt.day*86400
-
-# def datesort(ll):
-#     for lst in ll:
-#         sorted(lst[-1], key=lambda x: datetime.strptime(x, '%d/%m/%Y-%H:%M'))
-#     return lst

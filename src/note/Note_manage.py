@@ -7,7 +7,7 @@ class NoteManage:
 #TODO убрать такой кривой ретюрн
         return [[u.id, u.name, u.body, u.time]]
 
-#TODO обработать вариант когда не найдены элементы для удаления
+#TODO чтение из файла изменить на функцию
     def delete(name):
         lines = list()
         sear = None
@@ -28,6 +28,7 @@ class NoteManage:
             writer.writerows(lines)
         if sear != None: return[r]
 
+#TODO - убрать принты, возможно вынести инпуты
     def edit():
         search_name = input('Введите имя редактируемой заметки')
         lines = arrays(file_name())
