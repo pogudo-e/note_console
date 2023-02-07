@@ -23,7 +23,7 @@ def arrays(file):
 # Находит максимальный id из имеющихся и возвращает id+1
 def find_id():
     '''Folling the maximum identificator max < id '''
-    count = 1
+    count = 0
     arr = arrays(file_name())
     for i in range(0, len(arr)):
         try: 

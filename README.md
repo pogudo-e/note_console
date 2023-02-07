@@ -52,3 +52,11 @@ ___
 | `--delete -d`   | for removing. It accepts arguments in the form of a record identifier or name as input. |
 
 ___
+## Examples
+
+    python3 src/main.py --add firstNote added my first note in this app
+    python3 src/main.py --add secondNote added my second note in this app
+    python3 src/main.py --read
+    python3 src/main.py --read secondNote
+    python3 src/main.py --read 1
+    python3 src/main.py --delete firstNote
